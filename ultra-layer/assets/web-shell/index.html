@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>可编辑画板</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f1f3f7;color:#222638;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif}header{background:white;border-bottom:1px solid #e0e4ec;padding:22px max(20px,calc((100vw - 1160px)/2));font-weight:650}main{max-width:1160px;margin:32px auto;padding:0 20px;display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:28px}h1{font-size:25px;margin:0 0 8px}p{line-height:1.8;color:#6c7385;font-size:13px}.surface{padding:20px;border:1px solid #dce0e9;border-radius:12px;background:#e7eaf0}.frame-wrap{position:relative;margin:auto;overflow:hidden;box-shadow:0 5px 24px #12234624}iframe{display:block;position:absolute;left:0;top:0;border:0;transform-origin:top left;background:white}.tools{align-self:start;position:sticky;top:24px;background:white;padding:24px;border:1px solid #e1e5ed;border-radius:12px}h2{font-size:18px;margin:0 0 12px}button{width:100%;padding:14px 10px;border:0;border-radius:8px;background:#4f51dc;color:white;font:600 14px inherit;cursor:pointer}button:disabled{opacity:.5;cursor:wait}button:focus-visible{outline:3px solid #a2a7fb;outline-offset:3px}#copy-status{min-height:44px;font-size:12px}#copy-status[data-error=true]{color:#ac3434}.hint{font-size:12px;border-top:1px solid #edf0f5;padding-top:16px}#dimensions{font-size:12px}@media(max-width:900px){main{grid-template-columns:1fr;margin-top:20px}.tools{grid-row:1;position:static}.surface{padding:12px}header{padding:18px 20px}}
+</style>
+</head>
+<body>
+<header>图片与文字 · 可编辑画板</header>
+<main><section><h1 id="board-title">画板</h1><p id="dimensions"></p><div class="surface"><div class="frame-wrap"><iframe id="board" title="画板预览"></iframe></div></div></section>
+<aside class="tools"><h2>复制到 Figma</h2><p>整张排版一次复制，图片和正文分别保留。</p><button id="copy-board" type="button" disabled>复制画板到 Figma</button><p id="copy-status" role="status" aria-live="polite">正在加载画板…</p><p class="hint">在 Figma Design 画布按 ⌘V / Ctrl+V。双击正文继续编辑。指定字体需在 Figma 中可用。</p><p class="hint">无需设计插件。浏览器如询问剪贴板权限，请允许；内置预览不支持时，用 Chrome 打开此地址。</p></aside></main>
+<script src="copy.js"></script>
+</body></html>

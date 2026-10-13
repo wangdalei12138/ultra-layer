@@ -1,0 +1,4 @@
+interface:
+  display_name: "海报拆图与可编辑画板"
+  short_description: "将海报拆成透明素材与指定字体文字，生成无需插件的网页复制画板"
+  default_prompt: "使用 $poster-to-editable-board 将这张海报拆成透明 PNG 素材和可编辑文字，使用阿里巴巴普惠体，生成可复制到 Figma 的网页画板。"
